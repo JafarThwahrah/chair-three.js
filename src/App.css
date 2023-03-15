@@ -1,4 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 .App {
   width: 100vw;
   height: 100vh;
+  font-family: Poppins, sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.configurator {
+  margin-top: 10rem;
+  position: fixed;
+  right: 24px;
+  width: 320px;
+  bottom: 1vh;
+  color: white;
+  padding: 16px;
+}
+
+.config-title {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.config-value {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.type-label {
+  opacity: 0.7;
+
+  font-size: 12px;
+  color: rgb(221, 231, 240);
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  transition: 0.5s opacity;
+}
+.type:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.type.item-active .type-label {
+  color: white;
+  opacity: 1;
+}
+
+.color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  border: solid 2px grey;
+  opacity: 0.8;
+}
+
+.color-dot:hover {
+  cursor: pointer;
+  opacity: 1;
+  border: solid 2px white;
+}
+
+.type.item-active .color-dot {
+  border: solid 2px white;
+  opacity: 1;
 }
